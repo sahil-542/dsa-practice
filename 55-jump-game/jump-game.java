@@ -11,10 +11,13 @@ class Solution {
         boolean ans = false;
 
         for (int j = i + 1; j <= Math.min(n - 1, i + nums[i]); j++) {
-            ans = ans || solve(j, nums, n , dp);
+            if(ans || solve(j, nums, n , dp)){
+                dp[i] = 1;
+                return true;
+            };
         }
         dp[i] = 0;
-        return ans;
+        return false;
     }
 
     public boolean canJump(int[] nums) {

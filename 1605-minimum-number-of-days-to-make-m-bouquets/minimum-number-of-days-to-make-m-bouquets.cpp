@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isValid(int day , vector<int>arr , int m , int k){
-        int b = 0; // bloomed flowers
+        int b = 0; // bouquets
         int t = 0;
         for(int i = 0 ; i < arr.size() ; i++ ){
             if(arr[i] <= day){
